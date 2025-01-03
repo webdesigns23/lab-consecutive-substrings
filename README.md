@@ -22,9 +22,6 @@ Input: 'a'
 Output: ['a']
 ```
 
-Use the language of your choosing. We've included starter files for some
-languages where you can pseudocode, explain your solution and code.
-
 ## Before you start coding
 
 1. Rewrite the problem in your own words
@@ -32,15 +29,11 @@ languages where you can pseudocode, explain your solution and code.
 3. Write your own test cases
 4. Pseudocode
 5. Code!
+6. Determine Big(O)
 
 **_And remember, don't run our tests until you've passed your own!_**
 
 ## How to run your own tests
-
-### Ruby
-
-1. `cd` into the ruby folder
-2. `ruby <filename>.rb`
 
 ### JavaScript
 
@@ -48,12 +41,6 @@ languages where you can pseudocode, explain your solution and code.
 2. `node <filename>.js`
 
 ## How to run our tests
-
-### Ruby
-
-1. `cd` into the ruby folder
-2. `bundle install`
-3. `rspec`
 
 ### JavaScript
 
