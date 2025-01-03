@@ -1,4 +1,4 @@
-# Bonus 5: Consecutive Substrings
+# Consecutive Substrings
 
 ## Learning Goals
 
