@@ -1,2 +1,57 @@
 Please add your pseudocode to this file
 And a written explanation of your solution
+
+Define the Problem: Find all consecutive substrings in an array - every character in the path is next to the previous character in the string:
+1. Need to establish an anchor point [i=0]
+2. Then add the next character following the anchor point [i=0]+[j=i+1]
+3. Continue adding next letter array until reach end of array
+4. Repeat from next anchor point
+5. Push each string iteration in to an array
+
+
+Hint: Treat the string like an array and loop throught it. 
+
+Pseudocode:
+Loop through string:
+Create and empty array to store consecutive characters
+- For each character in string (anchor point) - push to array
+    - For each character that follows anchor point - push to array
+    Return the final array, that pushes the anchor point and consecutive characters after
+    
+
+Explain Your Logic - Iterate through every character of string 'abc':
+-Array - Created to store iteration results
+
+1. First Iteration:
+    -Outer Loop - will start with i = 0, so first character meaning 'a'
+    char = 'a': string[i]
+    push will send 'a' to array
+        -InnerLoop - will start with j = i + 1, so character following anchor is 'b'
+        Then adds characters that follow anchor character 'ab'
+        since this is nested this will continue through array of remaining characters adding to current combination, so next 'abc' 
+        push will send following combinations to array, 'ab', then 'abc'
+
+2. Second Iteration:
+Will repeat steps in First Iteration, but now starting with next character as anchor meaining 'b'       
+    char = 'b': string[i]
+    push will send 'b' to array
+        -InnerLoop - will start with j = i + 1, so character following anchor is 'c'
+        Then adds characters that follow anchor character 'bc'
+        since this is nested this will continue through array of remaining characters adding to current combination, so next 'abc' 
+        push will send following combinations to array, 'bc
+
+3. Third Iteration- final iteration because string length is 3 characters:
+Will repeat steps in First Iteration, but now starting with next character as anchor meaining 'b'       
+    char = 'c': string[i]
+    push will send 'c' to array
+        -InnerLoop - will start with j = i + 1, No character after C so end of iteration
+
+
+Return:
+After all loops have completed then the final array is returned in the consecutiveSubstrings = [ 'a', 'ab', 'abc', 'b', 'bc', 'c' ]
+
+
+
+Big O Analysis:
+Time Complexity for this nested loop is Quadratic Time: 0(n^2)
+The execution time will grow proportionally to the square (n^2) of the input size, because this solution compares all pairs using a nesting loop in an array that is of size n. In this 'abc' example, n=3 in this case (string is 3 characters long) so 3^2 = 9. The outer loop iterates 3 times and 3*3 = 9.
